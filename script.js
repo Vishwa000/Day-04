@@ -1,0 +1,25 @@
+//step 01: create an XHR obect
+var request=new XMLHttpRequest();
+
+//STEP 02: initate a request
+request.open("GET","https://restcountries.com/v2/all");
+
+//STEP 03: sending the request
+//pushing
+request.send();
+
+//step 04: once the data successfully loaded from server
+request.onload=function(){
+    var result=JSON.parse(request.response);
+    for(var i=0;i<result.length; i++){
+    
+      console.log(result[i].flag);
+  
+    }
+  }
+
+ 
+      
+    
+
+
